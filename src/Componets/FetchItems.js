@@ -19,14 +19,34 @@ export default function FetchItems(props) {
   }, [props.url])
 
   if (!data) {
-    return <div className="spinner" ></div>
+    return <div className="loading"
+                style={{height:'100vh'}}>
+              <span className="spinner"></span>
+              <h4 style={{height:'100vh', 
+                  position:' absolute',
+                  top: '60%',
+                  left: '48%',}}
+                  >Loading...</h4></div>
   }
+
+  if (data.length === 0){
+    return (
+      <div style={{height:'100vh'}}>
+      <p style={{fontSize:'1.5rem', fontWeight:'bold',
+      position:' absolute',
+              top: '50%',
+              left:'40%'}}>No Results Found!</p>
+    </div>
+    )
+  }
+
 
   return (
     <div>
       {data.map((item, index) => (
         <>
-        <div className='top-section' 
+        <div className='top-section'
+             key={index} 
              style={{display:'flex', flexDirection:'row', color:'gray', gap:'5px'}}>
                 <p className='order'
                     style={{margin:'0'}}>{index +1}.</p>
