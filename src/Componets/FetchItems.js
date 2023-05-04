@@ -94,6 +94,7 @@ export default function FetchItems(props) {
                 }}
               >
                 {item[props.title]}
+                {item[props.title2]}
               </a>
             </div>
                <div className='bottom-section'
