@@ -5,6 +5,13 @@ import HomePage from './Pages/HomePage';
 import Header from './Componets/Header';
 import Footer from './Componets/Footer';
 import SearchPage from './Pages/SearchPage';
+import NewPage from './Pages/NewPage';
+import CommentsPage from './Pages/Comments';
+import AskPage from './Pages/Ask';
+import PastPage from './Pages/PastPage';
+import ShowPage from './Pages/Show';
+import JobsPage from './Pages/Jobs';
+
 
 function App() {
   return (
@@ -14,6 +21,12 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/search' element={<SearchPage/>}/>
+          <Route path='/new' element={<NewPage/>}/>
+          <Route path='/ask' element={<AskPage />} />
+          <Route path='/comments' element={<CommentsPage/>}/>
+          <Route  path='/show' element={<ShowPage/>}/>
+          <Route path='/past' element={<PastPage/>}/>
+          <Route path='/jobs' element={<JobsPage/>}/>
         </Routes>
         <Footer/>
       </div>

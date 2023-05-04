@@ -14,6 +14,7 @@ export default function FetchItems(props) {
         setData(json.hits);
         setTotalPages(json.nbPages);
       } catch (error) {
+        alert('Something went wrong!')
         console.error(error);
       }
     };
@@ -70,10 +71,10 @@ export default function FetchItems(props) {
   return (
     <div style={{padding:'10px'}}>
       {data.map((item, index) => (
-        <>
+        <div key={item.objectID}>
             <div
               className="item"
-              key={index}
+              
               style={{ display: "flex", flexDirection: "row", gap: "8px", marginTop:'8px' }}
             >
               <p className="order" style={{ margin: "0" }}>
@@ -93,6 +94,7 @@ export default function FetchItems(props) {
                 }}
               >
                 {item[props.title]}
+                {item[props.title2]}
               </a>
             </div>
                <div className='bottom-section'
@@ -106,7 +108,7 @@ export default function FetchItems(props) {
                   <p style={{margin:'0'}}>{item[props.num_comments]} comments</p>
                                                  
             </div>
-        </>
+        </div>
       ))}
           <div className="pagination" style={{ padding: "10px" }}>
             <button
