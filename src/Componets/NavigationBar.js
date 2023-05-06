@@ -1,3 +1,4 @@
+// import { hover } from "@testing-library/user-event/dist/hover";
 import { NavLink } from "react-router-dom";
 
 
@@ -6,82 +7,81 @@ function Navigation (){
     return (
         <>
        
-        <nav className="nav-bar"
-             style={{display:"flex", textDecoration:'none'}}>
-            <NavLink 
+        <nav className="nav-bar">
+            {/* <NavLink 
                     to='/'
                     style={({isActive}) => {
                         return {
-                            color: isActive ? 'white' : 'black',
+                            color: isActive ? '#6ebaed' : 'white',
                             fontSize: '1.4rem',
                             textDecoration:'none',
-                         
+                            fontWeight: '700',
                         }
-                    }}>CodePulse</NavLink>
+                    }}>Code Pulse</NavLink> */}
             <NavLink 
                     to='/new'
                     style={({isActive}) => {
                         return {
-                            color: isActive ? 'white' : 'black',
+                            color: isActive ? 'orange' : 'white',
                             textDecoration:'none',
-                            marginTop:'5px',
+                            // marginTop:'5px',
                            
                         }
-                    }}>New|</NavLink>
+                    }}>New</NavLink>
             <NavLink 
                     to='/past'
                     style={({isActive}) => {
                         return {
-                            color: isActive ? 'white' : 'black',
+                            color: isActive ? 'orange' : 'white',
                             textDecoration:'none',
-                            marginTop:'5px',
+                            // marginTop:'5px',
                         }
-                    }}>Past|</NavLink>
+                    }}>Past</NavLink>
             <NavLink 
                     to='/comments'
                     style={({isActive}) => {
                         return {
-                            color: isActive ? 'white' : 'black',
+                            color: isActive ? 'orange' : 'white',
                             textDecoration:'none',
-                            marginTop:'5px'
+                            // marginTop:'5px'
                         }
-                    }}>Comments|</NavLink>
+                    }}>Comments</NavLink>
             <NavLink 
                     to='/ask'
                     style={({isActive}) => {
                         return {
-                            color: isActive ? 'white' : 'black',
+                            color: isActive ? 'orange' : 'white',
                             textDecoration:'none',
-                            marginTop:'5px'
+                            // marginTop:'5px'
                         }
-                    }}>Ask|</NavLink>
+                    }}>Ask</NavLink>
             <NavLink 
                     to='/show'
                     style={({isActive}) => {
                         return {
-                            color: isActive ? 'white' : 'black',
+                            color: isActive ? 'orange' : 'white',
                             textDecoration:'none',
-                            marginTop:'5px'
+                            // marginTop:'5px'
                         }
-                    }}>Show|</NavLink>
+                    }}>Show</NavLink>
             <NavLink 
                     to='/jobs'
                     style={({isActive}) => {
                         return {
-                            color: isActive ? 'white' : 'black',
+                            color: isActive ? 'orange' : 'white',
                             textDecoration:'none',
-                            marginTop:'5px'
+                            // marginTop:'5px'
                         }
-                    }}>Jobs|</NavLink>
-            <NavLink 
+                    }}>Jobs</NavLink>
+            {/* <NavLink 
                     to='/submit'
                     style={({isActive}) => {
                         return {
-                            color: isActive ? 'white' : 'black',
+                            color: isActive ? 'orange' : 'white',
                             textDecoration:'none',
                             marginTop:'5px'
                         }
-                    }}>Submit</NavLink>
+                    }}>Submit</NavLink> */}
         </nav>
         
         </>

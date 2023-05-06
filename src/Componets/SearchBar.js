@@ -4,11 +4,11 @@ export default function  SearchBar (props) {
 
 
     return (
-        <div>
+        <div class="SearchInput">
             <input type='search'
                    value={props.value ? props.value:''}
                    onChange={ props.handleChange}/>
-            <button onClick={props.handleSubmit}><CiSearch/></button>
+            <button class="btn-search" onClick={props.handleSubmit}><CiSearch/></button>
         </div>
     )
 }
