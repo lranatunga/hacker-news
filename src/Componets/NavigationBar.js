@@ -17,7 +17,7 @@ function Navigation (){
                             textDecoration:'none',
                          
                         }
-                    }}>Code Pulse</NavLink>
+                    }}>CodePulse</NavLink>
             <NavLink 
                     to='/new'
                     style={({isActive}) => {
