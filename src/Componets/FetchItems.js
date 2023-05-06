@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { CiCircleChevRight, CiCircleChevLeft } from 'react-icons/ci'
 
 export default function FetchItems(props) {
   const [data, setData] = useState(null);
@@ -74,11 +75,9 @@ export default function FetchItems(props) {
         <div key={item.objectID}>
             <div
               className="item"
-              
-              style={{ display: "flex", flexDirection: "row", gap: "8px", marginTop:'8px' }}
             >
-              <p className="order" style={{ margin: "0" }}>
-                {currentPage  * 30 + index + 1}.
+              <p className="order" style={{ margin: "0", fontWeight: "500", fontSize: '20px' }}>
+                {currentPage  * 30 + index + 1}. 
               </p>
               <a
                 href={item[props.href]}
@@ -89,7 +88,8 @@ export default function FetchItems(props) {
                   textDecoration: "none",
                   margin: "0",
                   color: "black",
-                  fontWeight: "600",
+                  fontWeight: "800",
+                  fontSize: '20px',
                   // fontSize:'16px'
                 }}
               >
@@ -98,7 +98,7 @@ export default function FetchItems(props) {
               </a>
             </div>
                <div className='bottom-section'
-                    style={{display:'flex', flexDirection:'row', gap:'10px', marginLeft:'50px', color:'grey', fontSize:'14px'}}>
+                    style={{display:'flex', flexDirection:'row', justifyContent: 'center', gap:'10px', color:'grey', fontSize:'14px', marginBottom: '40px'}}>
                   <p style={{margin:'0'}}>{item[props.points]} points</p>
                   <p className="author"
                      style={{margin:'0'}}>
@@ -110,23 +110,23 @@ export default function FetchItems(props) {
             </div>
         </div>
       ))}
-          <div className="pagination" style={{ padding: "10px" }}>
-            <button
+          <div className="pagination">
+            <button class="btn-pages"
               onClick={handlePrevPage}
               disabled={currentPage === 0}
               style={{ marginRight: "10px" }}
             >
-            {'<'}
+            {<CiCircleChevLeft/>}
             </button>
             <span>
               Page {currentPage + 1} of {totalPages}
             </span>
-            <button
+            <button class="btn-pages"
               onClick={handleNextPage}
               disabled={currentPage === totalPages - 1}
               style={{ marginLeft: "10px" }}
             >
-             {'>'}
+             {<CiCircleChevRight/>}
             </button>
           </div>
     </div>
