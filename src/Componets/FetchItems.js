@@ -35,7 +35,7 @@ export default function FetchItems(props) {
         className="loading"
         style={{ height: "100vh", position: "relative" }}
       >
-        <span className="spinner"></span>
+        {/* <span className="spinner"></span>
         <h4
           style={{
             height: "100vh",
@@ -45,7 +45,20 @@ export default function FetchItems(props) {
           }}
         >
           Loading...
-        </h4>
+        </h4> */}
+        <div class="lds-default"><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
       </div>
     );
   }
