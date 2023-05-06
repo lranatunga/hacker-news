@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import TimeAgo from 'react-timeago'
 
 export default function FetchItems(props) {
   const [data, setData] = useState(null);
@@ -117,7 +118,7 @@ export default function FetchItems(props) {
                      style={{margin:'0'}}>
                      by {item[props.author]}
                   </p>
-                  <p style={{margin:'0'}}>{item[props.time]}</p>
+                  <TimeAgo date={item[props.time]}/>
                   <p style={{margin:'0'}}>{item[props.num_comments]} comments</p>
                                                  
             </div>
