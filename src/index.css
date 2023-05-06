@@ -41,22 +41,11 @@ code {
 
 .lds-default {
   display: inline-block;
-  /* display: flex; */
   position: absolute;
-  /* top:calc(50% -40px);
-  left: calc(50%-40px); */
   width: 80px;
   height: 80px;
   top: 50%;
   left: 48%;
-  /* display: inline-block;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% - 80px);
-  height: calc(100vh - 80px); */
-
 }
 
 .lds-default div {
