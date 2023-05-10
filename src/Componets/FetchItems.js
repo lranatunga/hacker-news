@@ -117,7 +117,7 @@ export default function FetchItems(props) {
                   <p style={{margin:'0'}}>{item[props.points]} points</p>
                   <p className="author"
                      style={{margin:'0'}}>
-                     by <Link style={{textDecoration:'none'}} to='/users'>{item[props.author]}</Link>
+                     by <Link style={{textDecoration:'none', color:'grey'}} to='/users'>{item[props.author]}</Link>
                   </p>
                   <TimeAgo date={item[props.time]}/>
                   <p style={{margin:'0'}}>{item[props.num_comments]} comments</p>
