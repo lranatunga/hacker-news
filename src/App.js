@@ -12,6 +12,7 @@ import AskPage from './Pages/Ask';
 import PastPage from './Pages/PastPage';
 import ShowPage from './Pages/Show';
 import JobsPage from './Pages/Jobs';
+import LoginForm from './Pages/LogInPage'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route  path='/show' element={<ShowPage/>}/>
           <Route path='/past' element={<PastPage/>}/>
           <Route path='/jobs' element={<JobsPage/>}/>
+          <Route path='/login' element={<LoginForm/>}/>
         </Routes>
         <Footer/>
       </div>

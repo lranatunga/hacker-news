@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import TimeAgo from 'react-timeago'
+// import TimeAgo from 'react-timeago'
 import { CiCircleChevRight, CiCircleChevLeft } from 'react-icons/ci'
 
 export default function FetchItems(props) {
@@ -118,7 +118,7 @@ export default function FetchItems(props) {
                      style={{margin:'0'}}>
                      by {item[props.author]}
                   </p>
-                  <TimeAgo date={item[props.time]}/>
+                  {/* <TimeAgo date={item[props.time]}/> */}
                   <p style={{margin:'0'}}>{item[props.num_comments]} comments</p>
                                                  
             </div>
