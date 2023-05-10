@@ -8,6 +8,7 @@ import FetchItems from '../Componets/FetchItems'
                       url="http://hn.algolia.com/api/v1/search_by_date?tags=story&hitsPerPage=30"
                       href='url'
                       title="title"
+                      title2='story_title'
                       points="points"
                       author="author"
                       time="created_at"

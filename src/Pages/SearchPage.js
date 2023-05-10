@@ -15,9 +15,10 @@ export default function SearchPage() {
       <h4 style={{padding:'10px',display:'flex', justifyContent:'flex-start'}}>Search Results for "{query}"</h4>
 
       <FetchItems
-         url={`https://hn.algolia.com/api/v1/search?query=${query}&hitsPerPage=30`}
+         url={`https://hn.algolia.com/api/v1/search_by_date?query=${query}&hitsPerPage=30`}
          href='url'
          title="title"
+         title2="story_title"
          points="points"
          author="author"
          time="created_at"
