@@ -13,6 +13,7 @@ import PastPage from './Pages/PastPage';
 import ShowPage from './Pages/Show';
 import JobsPage from './Pages/Jobs';
 // import Users from './Componets/User';
+import LoginForm from './Pages/LogInPage'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route  path='/show' element={<ShowPage/>}/>
           <Route path='/past' element={<PastPage/>}/>
           <Route path='/jobs' element={<JobsPage/>}/>
+          <Route path='/login' element={<LoginForm/>}/>
           {/* <Route path='/users' element={<Users/>}/> */}
         </Routes>
         <Footer/>
