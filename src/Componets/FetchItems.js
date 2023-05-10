@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import TimeAgo from 'react-timeago'
 import { CiCircleChevRight, CiCircleChevLeft } from 'react-icons/ci'
+import {Link} from 'react-router-dom'
 
 export default function FetchItems(props) {
   const [data, setData] = useState(null);
@@ -48,7 +49,7 @@ export default function FetchItems(props) {
         >
           Loading...
         </h4> */}
-        <div class="lds-default"><div></div>
+        <div className="lds-default"><div></div>
         <div></div>
         <div></div>
         <div></div>
@@ -116,7 +117,7 @@ export default function FetchItems(props) {
                   <p style={{margin:'0'}}>{item[props.points]} points</p>
                   <p className="author"
                      style={{margin:'0'}}>
-                     by {item[props.author]}
+                     by <Link style={{textDecoration:'none'}} to='/users'>{item[props.author]}</Link>
                   </p>
                   <TimeAgo date={item[props.time]}/>
                   <p style={{margin:'0'}}>{item[props.num_comments]} comments</p>
@@ -125,7 +126,7 @@ export default function FetchItems(props) {
         </div>
       ))}
           <div className="pagination">
-            <button class="btn-pages"
+            <button className="btn-pages"
               onClick={handlePrevPage}
               disabled={currentPage === 0}
               style={{ marginRight: "10px" }}
@@ -135,7 +136,7 @@ export default function FetchItems(props) {
             <span>
               Page {currentPage + 1} of {totalPages}
             </span>
-            <button class="btn-pages"
+            <button className="btn-pages"
               onClick={handleNextPage}
               disabled={currentPage === totalPages - 1}
               style={{ marginLeft: "10px" }}
