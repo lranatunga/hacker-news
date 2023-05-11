@@ -12,7 +12,7 @@ import AskPage from './Pages/Ask';
 import PastPage from './Pages/PastPage';
 import ShowPage from './Pages/Show';
 import JobsPage from './Pages/Jobs';
-// import Users from './Componets/User';
+import Users from './Componets/User';
 import LoginForm from './Pages/LogInPage'
 
 
@@ -22,6 +22,7 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
+          <Route path='/login' element={<LoginForm/>}/>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/search' element={<SearchPage/>}/>
           <Route path='/new' element={<NewPage/>}/>
@@ -30,8 +31,8 @@ function App() {
           <Route  path='/show' element={<ShowPage/>}/>
           <Route path='/past' element={<PastPage/>}/>
           <Route path='/jobs' element={<JobsPage/>}/>
-          <Route path='/login' element={<LoginForm/>}/>
-          {/* <Route path='/users' element={<Users/>}/> */}
+          
+          <Route path='/users' element={<Users/>}/>
         </Routes>
         <Footer/>
       </div>
